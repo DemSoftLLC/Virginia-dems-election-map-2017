@@ -4,24 +4,33 @@
     width: 954px;
 }
 
-#candidate_img
-{
-    height: 125px;
-}
-
-#sm_candidate_img
+.sm_candidate_img
 {
     display: inline-block;
-    /*border-style: solid;*/
-    height: 85px;
+    /*border-style: solid;
+    border-color: rgb(48, 65, 255, 0.4);*/
+    width: 240px;
 }
 
-#can-list h3, #can-list p{
+.link_btn{
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #3a41ff; /* Set a background color */
+    color: white; /* Text color */
+    font-size: 25px;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.link_btn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.can-list h3, .can-list p{
     display: inline-block;
-}
-
-.leaflet-control-attribution {
-    display: none;
 }
 
 .holder{
@@ -29,7 +38,7 @@
     bottom: 0;
 }
 
-#can-list span:before, p:before{
+.can-list span:before, p:before{
     content:" ";
     display:inline-block;
     width:24px;
@@ -67,4 +76,36 @@
 
 .list_el{
         display: inline-block;
+}
+
+#myBtn { /*jump to the top button*/
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    top: 40px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #3a41ff; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.leaflet-control-attribution {
+     display: none;
+ }
+
+ .holder{
+     display: inline-block;
+     bottom: 0;
+  }
+
+.list_el{
+         display: inline-block;
 }

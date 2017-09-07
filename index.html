@@ -22,7 +22,7 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 
-            <!--bootstrap style and js-->
+            <!--bootstrap 4 style and js-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -42,17 +42,14 @@
 
       <div class="container">
           <div class="row">
-              <div class="col-12" id="mapid">
+              <div align="center" class="col-12" id="mapid"> <!--change id to "mapid" to reload map.-->
 
               </div>
           </div>
-          <div hidden class="row">
+          <div class="row">
               <div class="col">
-                  <p></p>
-                  <p>Choose your district on the map <br>or select from the dropdown.</p>
                   <br>
                   <select class="option" id="candidate_dropdown">
-
                       <option value="1">District #1</option>
                       <option value="2">District #2</option>
                       <option value="3">District #3</option>
@@ -155,25 +152,69 @@
 
       <div class="container">
           <div class="row">
-              <div id="can-list">
-                  <!--List of all candidates and their info: can-list. Remove "-hidden" from id to show list-->
+              <div class="sublist-header">
+                <h1><u>Challengers</u></h1>
+                <br>
+              </div>
+          </div>
+          <div class="row">
+              <div id="challenger-list" class="col can-list">
+                  <!--List of all candidates and their info: can-list-->
+                 <!-- <div id="can1" class="col list_el">
+
+                    <div class="district_name" align="center">
+                        <h3>${Lfirst} ${Llast} - District ${key}</h3>
+                        <h4>Democratic ${Lchallenger}</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col" align="center">
+                            <img class="sm_candidate_img" src="http://fourthwavestudios.com/img/team/joseph.avatar.png" alt="No image available.">
+                        </div>
+                        <div class="col">
+                            <a href="#website"><button class="link_btn">Website</button></a>
+                            <a href="#facebook"><button class="link_btn">Facebook</button></a>
+                            <a href="#twitter"><button class="link_btn">Twitter</button></a>
+                        </div>
+
+
+                    </div>
+
+                </div>-->
+              </div>
+          </div>
+          <div class="row">
+              <div class="sublist-header">
+
+                <h1><u>Incumbents</u></h1>
+                <br>
+
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+              <div id="incumbent-list" class="can-list col">
               </div>
           </div>
 
       </div>
 
+      <div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      </div>
+
+      <hr>
+
       <div hidden class="container">
-          <div class="row">
-              <div class="test">
+           <div class="row">
+               <div class="test">
                   <p align="center"><strong>${name}</strong> (D-${challenger})</p>
-                  <p align="center">District ${}</p>
-              </div>
+                   <p align="center">District ${}</p>              </div>
           </div>
       </div>
 
       <hr>
 
-
+      <script type="text/javascript" src="topScroll.js"> </script>
       <script type="text/javascript" src="mapper.js"> </script>
       <script type="text/javascript" src="list.js"> </script>
   </body>
